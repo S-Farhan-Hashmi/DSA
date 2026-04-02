@@ -30,3 +30,42 @@ public class QuickSortLomuto {
         arr[i]=temp;
     }
 }
+/* package SORTING;
+import java.util.*;
+public class QuickSortHoare {
+    public static void main(String[] args){
+        int[] arr={8,4,7,9,3,10,5};
+        quickSort(arr,0,arr.length-1);
+        System.out.println(Arrays.toString(arr));
+    }
+    public static void quickSort(int[] arr,int low,int high){
+        if(low<high){
+            int pivot= hoarePartition(arr,low,high);
+            quickSort(arr,low,pivot);
+            quickSort(arr,pivot+1,high);
+        }
+    }
+    public static int hoarePartition(int arr[], int low, int high){
+        int pivot=arr[low];
+        int i=low-1;
+        int j=high+1;
+        while(true) {
+            do {
+                i++;
+            } while (arr[i] < pivot);
+            do{
+                j--;
+            }while(arr[j]>pivot);
+            if(i>=j){
+                return j;
+            }
+            swap(arr,i,j);
+        }
+    }
+    public static void swap(int[] arr , int i, int j){
+        int temp=arr[j];
+        arr[j]=arr[i];
+        arr[i]=temp;
+    }
+}
+*/
